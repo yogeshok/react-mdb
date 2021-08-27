@@ -8,41 +8,15 @@ import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL, API_KEY } from '../config';
 // Component
 
 // Hook
+import { useHomeFetch } from '../Hooks/useHomeFetch';
 
 // Image
 import NoImage from '../images/no_image.jpg';
 
 const Home = () => {
 
-    // Functional component of react
-    const [state, setState] = useState();
-    const [loading, setLoading] = useState(false);
-    const [error, setError] = useState(false);
 
-    const fetchMovies = async (page, searchTerm = "") => {
-        try {
-            setError(false);
-            setLoading(true);
-
-            const movies = await API.fetchMovies(searchTerm, page);
-
-            // () is used to return a object
-            setState(prev => ({
-                ...movies,
-                results:
-                    page > 1 ? [...prev.results, ...movies.results] : [...movies.results]
-            }))
-
-        } catch (error) {
-            setError(true);
-        }
-        setLoading(false);
-    };
-
-    useEffect(() => {
-        fetchMovies(1);
-    }, [])
-
+    const { state, loading, error } = useHomeFetch();
     console.log(state);
 
     return (
