@@ -6,6 +6,7 @@ import API from '../API';
 import { POSTER_SIZE, BACKDROP_SIZE, IMAGE_BASE_URL, API_KEY } from '../config';
 
 // Component
+import HeroImage from './HeroImage';
 
 // Hook
 import { useHomeFetch } from '../Hooks/useHomeFetch';
@@ -20,7 +21,16 @@ const Home = () => {
     console.log(state);
 
     return (
-        <div>Home Page</div>
+        <>
+            {state.results[0] ? (
+                <HeroImage
+                    image={`${IMAGE_BASE_URL}${BACKDROP_SIZE}${state.results[0].backdrop_path}`}
+                    title={`${state.results[0].original_title}`}
+                    test={`${state.results[0].overview}`}
+                />
+            ) : null
+            }
+        </>
     )
 }
 
