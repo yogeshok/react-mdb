@@ -1,7 +1,7 @@
 import React from 'react';
 
 //styles
-import { Wrapper, Content } from '../HeroImage/HeroImage.styles';
+import { Wrapper, Content } from './Grid.styles';
 
 // here children is a default prop in react
 const Grid = ({ header, children }) => (
