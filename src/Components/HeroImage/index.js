@@ -5,14 +5,13 @@ import { Wrapper, Content, Text } from './HeroImage.styles';
 
 const HeroImage = ({ image, title, text }) => (
     <Wrapper image={image}>
-        <content>
-            <text>
+        <Content>
+            <Text>
                 <h1>{title}</h1>
                 <p>{text}</p>
-            </text>
-        </content>
+            </Text>
+        </Content>
     </Wrapper>
-
 );
 
 export default HeroImage;
