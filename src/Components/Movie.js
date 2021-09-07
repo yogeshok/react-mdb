@@ -1,7 +1,21 @@
 import React from "react";
+//config
+import { IMAGE_BASE_URL, POSTER_SIZE } from "../config";
+//components
+import Grid from "./Grid";
+import Spinner from "./Spinner";
+//Hook
 
-const Movie = () => (
-    <div>Movie</div>
-);
+//Image
+import NOIMAGE from '../images/no_image.jpg'; 
+
+const Movie = () => {
+    
+    return (
+        <>
+        <div>Movie</div>
+        </>
+    )
+};
 
 export default Movie;
