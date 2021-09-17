@@ -16,7 +16,7 @@ export const Content = styled.div`
     /* justify-content: space-around; */
 
     .column {
-        display: block;
+        display: flex;
         align-items: center;
         justify-content: center;
         background: var(--medGrey);
@@ -30,13 +30,14 @@ export const Content = styled.div`
         :last-child {
             margin-right: 0;
         }
+    }
 
-        @media (max-width: 728px) {
-            display: block;
+    @media (max-width: 768px) {
+        display: block;
 
-            .column {
-                margin: 20px 0;
-            }
+        .column {
+            margin: 20px 0;
         }
     }
+    
 `;
