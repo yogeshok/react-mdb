@@ -15,7 +15,6 @@ export const convertMoney = money => {
 };
 
 export const isPersistedState = stateName => {
-  // for local storage just swap out sessionStorage with localStorage
   const sessionState = sessionStorage.getItem(stateName);
   return sessionState && JSON.parse(sessionState);
 };
