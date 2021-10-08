@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import searchIcon from '../../images/search-icon.svg';
 // Styles
 import { Wrapper, Content } from './SearchBar.styles';
+// class component added successfully
 
 class SearchBar extends Component {
     // const [state, setState] = useState('');
